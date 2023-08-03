@@ -1,0 +1,17 @@
+# SLAVE Node Config
+[rtmp]
+enabled = true
+port = 1935
+
+# Formats
+[hls]
+enabled = true
+port = 8080
+
+[httpflv]
+enabled = true
+port = 8081
+
+# Logining
+[log]
+level = "info"

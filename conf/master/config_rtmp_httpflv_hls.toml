@@ -1,0 +1,27 @@
+# Master Node Config
+[rtmp]
+enabled = true
+port = 1935
+
+# Slaves
+[[rtmp.push]]
+enabled = true
+address = "x-node-2"
+port = 1935
+[[rtmp.push]]
+enabled = true
+address = "x-node-3"
+port = 1935
+
+# Formats
+[hls]
+enabled = true
+port = 8080
+
+[httpflv]
+enabled = true
+port = 8081
+
+# Logining
+[log]
+level = "info"

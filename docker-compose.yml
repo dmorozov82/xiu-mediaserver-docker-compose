@@ -1,0 +1,30 @@
+services:
+  x-master:
+    container_name: x-master
+    image: ${XIMAGE}
+    ports:
+      - 1935:1935
+      - 8081:8081
+      - 8080:8080
+    volumes:
+      - ./conf/master/config_rtmp_httpflv_hls.toml:/etc/xiu/config_rtmp_httpflv_hls.toml
+
+  x-slave-1:
+    container_name: x-slave-1
+    image: ${XIMAGE}
+    ports:
+      - 1936:1935
+      - 8181:8081
+      - 8180:8080
+    volumes:
+      - ./conf/slave/config_rtmp_httpflv_hls.toml:/etc/slave/config_rtmp_httpflv_hls.toml
+
+  x-slave-2:
+    container_name: x-slave-2
+    image: ${XIMAGE}
+    ports:
+      - 1937:1935
+      - 8281:8081
+      - 8280:8080
+    volumes:
+      - ./conf/slave/config_rtmp_httpflv_hls.toml:/etc/slave/config_rtmp_httpflv_hls.toml
